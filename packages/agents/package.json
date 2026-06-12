@@ -1,0 +1,27 @@
+{
+  "name": "@hoteliq/agents",
+  "version": "1.0.0",
+  "description": "LangChain agent logic for HotelIQ",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src --ext .ts",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.104.1",
+    "@hoteliq/observability": "*",
+    "@langchain/core": "^1.1.48",
+    "@langchain/openai": "^1.4.7",
+    "@prisma/client": "^7.8.0",
+    "langchain": "^1.4.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.55.0",
+    "typescript": "^5.3.3"
+  }
+}

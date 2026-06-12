@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --card: #111111;
+  --border: #1f1f1f;
+  --foreground: #ffffff;
+  --muted: #6b7280;
+  --primary: #3b82f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: inherit;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f1f;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Card styles */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+/* Animation utilities */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #10b981;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.toast.show {
+  transform: translateX(0);
+}
+
+/* Status badges */
+.status-draft {
+  background: #374151;
+  color: #d1d5db;
+}
+
+.status-active {
+  background: #10b981;
+  color: white;
+}
+
+.status-completed {
+  background: #3b82f6;
+  color: white;
+}
+
+/* Agent badges */
+.agent-research {
+  background: #8b5cf6;
+  color: white;
+}
+
+.agent-decisioning {
+  background: #3b82f6;
+  color: white;
+}
+
+.agent-execution {
+  background: #10b981;
+  color: white;
+}
+
+.agent-orchestrator {
+  background: #f59e0b;
+  color: white;
+}
+
+.agent-feedback {
+  background: #ef4444;
+  color: white;
+}
+
+/* Confidence badges */
+.confidence-high {
+  background: #10b981;
+  color: white;
+}
+
+.confidence-medium {
+  background: #f59e0b;
+  color: white;
+}
+
+.confidence-low {
+  background: #ef4444;
+  color: white;
+}
+
+/* Toast animations */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
