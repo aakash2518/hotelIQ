@@ -2,6 +2,5 @@ apps/api/
 packages/
 infra/
 .github/
-node_modules/
-*.md
+README.md
 *.log
