@@ -18,6 +18,8 @@
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist"],
   "references": [
-    { "path": "../../packages/observability" }
+    { "path": "../../packages/observability" },
+    { "path": "../../packages/agents" },
+    { "path": "../../packages/pipelines" }
   ]
 }

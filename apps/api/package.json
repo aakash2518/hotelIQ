@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "build": "tsc",
+    "build": "npx prisma generate && tsc",
     "start": "node dist/index.js",
     "lint": "eslint src --ext .ts",
     "clean": "rm -rf dist"
@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
+    "@hoteliq/agents": "*",
     "@hoteliq/observability": "*",
+    "@hoteliq/pipelines": "*",
     "@langchain/core": "^1.1.48",
     "@langchain/google-genai": "^2.1.31",
     "@langchain/groq": "^1.2.1",

@@ -20,7 +20,7 @@ router.get('/', async (_req: Request, res: Response) => {
       },
     });
 
-    const hotelsWithLatestPrice = hotels.map((hotel) => ({
+    const hotelsWithLatestPrice = hotels.map((hotel: any) => ({
       id: hotel.id,
       name: hotel.name,
       city: hotel.city,
