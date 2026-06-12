@@ -1,7 +1,7 @@
 apps/api/
-packages/agents/
-packages/observability/
-packages/pipelines/
-.github/
+packages/
 infra/
+.github/
+node_modules/
 *.md
+*.log
