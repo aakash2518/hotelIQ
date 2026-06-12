@@ -1,13 +1,13 @@
 {
   "framework": "nextjs",
-  "buildCommand": "npm run build",
+  "buildCommand": "cd ../.. && npm ci && npm run build:packages && cd apps/web && npm run build",
   "outputDirectory": ".next",
-  "installCommand": "npm ci",
+  "installCommand": "cd ../.. && npm ci",
   "env": {
     "NEXT_PUBLIC_API_URL": "@api_url"
   },
   "functions": {
-    "apps/web/src/app/api/health/route.ts": {
+    "src/app/api/health/route.ts": {
       "maxDuration": 10
     }
   },
