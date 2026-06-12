@@ -4,13 +4,14 @@
   "description": "HotelIQ - Agentic Travel Marketing Intelligence Platform",
   "private": true,
   "workspaces": [
-    "apps/*",
+    "apps/web",
     "packages/*"
   ],
   "scripts": {
     "dev": "npm run dev --workspaces --if-present",
     "build": "npm run build --workspace=apps/web",
     "build:all": "npm run build --workspaces --if-present",
+    "build:api": "cd apps/api && npm install && npm run build",
     "lint": "npm run lint --workspaces --if-present",
     "clean": "npm run clean --workspaces --if-present",
     "verify": "node verify-build.js",

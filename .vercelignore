@@ -1,0 +1,7 @@
+apps/api/
+packages/agents/
+packages/observability/
+packages/pipelines/
+.github/
+infra/
+*.md
