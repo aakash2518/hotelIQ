@@ -9,11 +9,12 @@
   ],
   "scripts": {
     "dev": "npm run dev --workspaces --if-present",
-    "build": "npm run build --workspaces --if-present",
+    "build": "npm run build --workspace=apps/web",
+    "build:all": "npm run build --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
     "clean": "npm run clean --workspaces --if-present",
     "verify": "node verify-build.js",
-    "setup": "npm install && npm run build && node verify-build.js"
+    "setup": "npm install && npm run build:all && node verify-build.js"
   },
   "devDependencies": {
     "@types/node": "^20.10.0",
