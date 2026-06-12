@@ -9,9 +9,7 @@
   ],
   "scripts": {
     "dev": "npm run dev --workspaces --if-present",
-    "build": "npm run build:packages && npm run build:apps",
-    "build:packages": "npm run build --workspace=packages/observability && npm run build --workspace=packages/agents && npm run build --workspace=packages/pipelines",
-    "build:apps": "npm run build --workspace=apps/web && npm run build --workspace=apps/api",
+    "build": "npm run build --workspaces --if-present",
     "lint": "npm run lint --workspaces --if-present",
     "clean": "npm run clean --workspaces --if-present",
     "verify": "node verify-build.js",
